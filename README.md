@@ -16,3 +16,7 @@ Please feel free to contribute pull requests or create issues for bugs and featu
 
 * JHU - https://github.com/CSSEGISandData/COVID-19 - Data repository operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE).
 * NovelCOVID API based on top of <a href="https://www.worldometers.info/coronavirus/">WorldMeter</a>
+
+## Special Thanks ##
+
+* Lucky Me! pancit canton, Colt 45 beer, GreenCross isopropyl alcohol and Psyduck!
