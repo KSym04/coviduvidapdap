@@ -10,7 +10,7 @@ Please feel free to contribute pull requests or create issues for bugs and featu
 
 ## License & Credits ##
 
-The app is available to the public strictly for educational and academic research purposes. It's not allowed to publish, distribute, or use the app in a commercial way.
+<a href="http://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</a> - The app is available to the public strictly for educational and academic research purposes. It's not allowed to publish, distribute, or use the app in a commercial way.
 
 ### Sources ###
 
