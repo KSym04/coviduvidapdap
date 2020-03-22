@@ -99,7 +99,15 @@ echo $this->tag->getDoctype(); ?>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach( $table_obj as $tobj ) : ?>
+                                <?php
+                                     $get_total_cases      = 0;
+                                     $get_total_todayCases = 0;
+                                     $get_total_deaths     = 0;
+                                     $get_total_todayDeaths = 0;
+                                     $get_total_recovered   = 0;
+                                     $get_total_active      = 0;
+                                     $get_total_critical    = 0;
+                                     foreach( $table_obj as $tobj ) : ?>
                                     <tr>
                                         <td><?php echo $tobj->country; ?></td>
                                         <td><?php echo number_format( $tobj->cases ); ?></td>
@@ -110,8 +118,29 @@ echo $this->tag->getDoctype(); ?>
                                         <td><?php echo number_format( $tobj->active ); ?></td>
                                         <td><?php echo number_format( $tobj->critical ); ?></td>
                                     </tr>
+                                    <?php 
+                                        $get_total_cases      = $get_total_cases + $tobj->cases;
+                                        $get_total_todayCases = $get_total_todayCases + $tobj->todayCases;
+                                        $get_total_deaths     = $get_total_deaths + $tobj->deaths;
+                                        $get_total_todayDeaths = $get_total_todayDeaths + $tobj->todayDeaths;
+                                        $get_total_recovered  = $get_total_recovered + $tobj->recovered;
+                                        $get_total_active     = $get_total_active + $tobj->active;
+                                        $get_total_critical   = $get_total_critical + $tobj->critical;
+                                    ?>
                                 <?php endforeach; ?>
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td class="has-background-grey-lighter"><strong class="has-text-dark">TOTAL</strong></td>
+                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_cases ); ?></strong></td>
+                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_todayCases ); ?></strong></td>
+                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_deaths ); ?></strong></td>
+                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_todayDeaths ); ?></strong></td>
+                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_recovered ); ?></strong></td>
+                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_active ); ?></strong></td>
+                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_critical ); ?></strong></td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                     <div class="column is-1"></div>
