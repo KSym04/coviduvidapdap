@@ -36,7 +36,6 @@ echo $this->tag->getDoctype(); ?>
     <?php echo $this->tag->stylesheetLink( 'https://fonts.googleapis.com/css?family=Montserrat|Quicksand:400,500,600,700&display=swap' ); ?>
     <?php echo $this->tag->stylesheetLink( 'https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css' ); ?>
     <?php echo $this->tag->stylesheetLink( 'css/base.css' ); ?>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="9d886c7a-c179-4901-8136-46529dd5404d" data-blockingmode="auto" type="text/javascript"></script>
 </head>
 <body>
 <div class="site-page__wrapper">
@@ -62,7 +61,7 @@ echo $this->tag->getDoctype(); ?>
                         <div class="navbar-start">
                         </div>
 
-                        <?php echo displayMenu(); ?>
+                        <?php //echo displayMenu(); ?>
                     </div>
                 </nav><!-- .navbar -->
             </div>
@@ -152,13 +151,13 @@ echo $this->tag->getDoctype(); ?>
                                 <?php foreach( $table_obj as $tobj ) : ?>
                                     <tr>
                                         <td><?php echo $tobj->country; ?></td>
-                                        <td><?php echo $tobj->cases; ?></td>
+                                        <td><?php echo number_format( $tobj->cases ); ?></td>
                                         <?php echo notificationsCheck( $tobj->todayCases, 'has-text-dark has-background-warning' ); ?>
-                                        <td><?php echo $tobj->deaths; ?></td>
+                                        <td><?php echo number_format( $tobj->deaths ); ?></td>
                                         <?php echo notificationsCheck( $tobj->todayDeaths, 'has-text-white has-background-danger' ); ?>
-                                        <td><?php echo $tobj->recovered; ?></td>
-                                        <td><?php echo $tobj->active; ?></td>
-                                        <td><?php echo $tobj->critical; ?></td>
+                                        <td><?php echo number_format( $tobj->recovered ); ?></td>
+                                        <td><?php echo number_format( $tobj->active ); ?></td>
+                                        <td><?php echo number_format( $tobj->critical ); ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
