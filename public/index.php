@@ -25,7 +25,7 @@ define( 'BASE_PATH', dirname( __DIR__ ) );
 define( 'APP_PATH', BASE_PATH . '/app' );
 
 require_once( APP_PATH . '/helpers/snippets.php' );
-require_once( APP_PATH . '/helpers/menu.php' );
+require_once( APP_PATH . '/helpers/templates.php' );
 
 // Initialize Loader
 $loader = new Loader();

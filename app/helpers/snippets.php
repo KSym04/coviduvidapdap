@@ -1,4 +1,7 @@
 <?php
+
+defined( 'BASE_PATH' ) || exit;
+
 /**
  * Notifications check.
  * 
@@ -35,4 +38,14 @@ function getNewData( $url, $file_name ) {
     curl_exec( $ch );
     curl_close( $ch );
     fclose( $fp );
+}
+
+/**
+ * Get visitor country code.
+ * 
+ * @since 1.0.0
+ */
+function getCountryCode() {
+    $country_code = ! empty( $_SERVER["HTTP_CF_IPCOUNTRY"] ) ? strtolower( $_SERVER["HTTP_CF_IPCOUNTRY"] ) : 'unknown';
+    return $country_code;
 }
