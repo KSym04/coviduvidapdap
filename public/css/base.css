@@ -8,6 +8,9 @@ body {
   color: #363636;
 }
 
+.site-page__header {
+  margin-bottom: 60px;
+}
 .site-page__header-inner {
   background-color: #00d1b2;
 }
@@ -22,7 +25,7 @@ body {
   background-color: transparent !important;
 }
 .site-page__welcome-msg .tag {
-  margin: 60px auto 30px;
+  margin: 0 auto 30px;
 }
 .site-page__welcome-msg .tag br {
   display: none;
