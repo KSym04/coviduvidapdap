@@ -34,7 +34,7 @@ body {
     }
 
     &__confirmed-cases {
-        margin-bottom: 4em;
+        margin-bottom: 2em;
 
         .title, 
         .subtitle {
@@ -48,6 +48,7 @@ body {
             display: block;
             line-height: 1;
             text-align: center;
+            margin-bottom: 0.75em;
         }
 
         .maincounter {

@@ -25,7 +25,7 @@ body {
   margin: 60px auto 30px;
 }
 .site-page__confirmed-cases {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 .site-page__confirmed-cases .title,
 .site-page__confirmed-cases .subtitle {
@@ -38,6 +38,7 @@ body {
   display: block;
   line-height: 1;
   text-align: center;
+  margin-bottom: 0.75em;
 }
 .site-page__confirmed-cases .maincounter {
   font-size: 3.25rem;
