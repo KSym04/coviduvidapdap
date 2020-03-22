@@ -11,12 +11,13 @@ echo $this->tag->getDoctype(); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <?php echo $this->tag->stylesheetLink('css/bases.css'); ?>
+    <?php echo $this->tag->stylesheetLink( 'https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'css/base.css' ); ?>
 </head>
 <body>
     <h1>Hello Phalcon, its working.</h1>
 
-<?php echo $this->tag->javascriptInclude('https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js', false); ?>
-<?php echo $this->tag->javascriptInclude('js/base.js'); ?>
+<?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js', false ); ?>
+<?php echo $this->tag->javascriptInclude( 'js/base.js' ); ?>
 </body>
 </html>
