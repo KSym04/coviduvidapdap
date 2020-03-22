@@ -73,18 +73,6 @@ echo $this->tag->getDoctype(); ?>
     <!-- BEGIN MAIN -->
     <main class="site-page__content">
         <div class="site-page__content-inner">
-
-            <?php 
-                // Initiate get counts.
-                $ch = curl_init();
-                curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
-                curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-                curl_setopt( $ch, CURLOPT_URL, 'https://corona.lmao.ninja/all' );
-                $result = curl_exec( $ch );
-                curl_close( $ch );
-
-                $current_counts_obj = json_decode( $result );
-            ?>
             
             <div class="site-page__welcome-msg container is-widescreen">
                 <div class="columns">
@@ -118,18 +106,6 @@ echo $this->tag->getDoctype(); ?>
                     <div class="column is-1"></div>
                 </div>
             </div><!-- .site-page__confirmed-cases -->
-
-            <?php 
-                // Initiate get counts.
-                $ch = curl_init();
-                curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
-                curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-                curl_setopt( $ch, CURLOPT_URL, 'https://corona.lmao.ninja/countries' );
-                $result = curl_exec( $ch );
-                curl_close( $ch );
-
-                $table_obj = json_decode( $result );
-            ?>
 
             <div class="site-page__table-cases container">
                 <div class="columns">

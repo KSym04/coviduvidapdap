@@ -71,6 +71,11 @@ $di->set(
             "controller" => 'privacy'
         ));
 
+        // fetch.
+        $router->add("/fetch", array(
+            "controller" => 'fetch'
+        ));
+
         $router->handle();
         return $router;
     }
