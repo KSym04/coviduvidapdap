@@ -6,9 +6,9 @@
  * @since 1.0.0
  */
 function displayMenu( $menulist = array() ) {
-    return '<div class="navbar-end">
+    return '<div class="navbar-end is-clearfix">
                 <strong class="has-text-white">Share</strong>
-                <p class="buttons">
+                <p class="buttons is-pulled-right">
                     <a href="https://twitter.com/intent/tweet?url=' . BASE_URL . '" target="_blank" rel="nofollow noopener" class="button  is-info">
                         <span class="icon">
                             <i class="fab fa-twitter"></i>

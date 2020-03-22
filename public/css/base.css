@@ -28,6 +28,11 @@ body {
   display: inline-block;
   margin-right: 10px;
 }
+@media (max-width: 1024px) {
+  .site-page__header-inner strong {
+    display: none;
+  }
+}
 .site-page__welcome-msg .tag {
   margin: 0 auto 0;
 }
