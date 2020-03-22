@@ -20,7 +20,3 @@ Please feel free to contribute pull requests or create issues for bugs and featu
 ### Libraries ###
 
 * <a href="https://bulma.io/">Bulma</a>
-
-### Special Thanks ###
-
-* Lucky Me! pancit canton, Colt 45 beer, GreenCross isopropyl alcohol and Psyduck!

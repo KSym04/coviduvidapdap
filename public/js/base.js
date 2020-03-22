@@ -1,1 +1,0 @@
-/* Simple Phalcon JS */
