@@ -18,5 +18,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
 }
+.site-page__welcome-msg .tag {
+  margin: 60px auto 30px;
+}
 
 /*# sourceMappingURL=base.css.map */

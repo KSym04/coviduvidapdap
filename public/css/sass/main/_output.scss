@@ -22,4 +22,10 @@ body {
             }
         }
     }
+
+    &__welcome-msg {
+        .tag {
+            margin: 60px auto 30px;
+        }
+    }
 }
