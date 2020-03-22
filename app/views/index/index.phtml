@@ -1,0 +1,22 @@
+<?php
+
+use Phalcon\Tag;
+
+// Set Document Type
+$this->tag->setDoctype(Tag::HTML5);
+echo $this->tag->getDoctype(); ?>
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+<head>
+    <?php echo $this->tag->getTitle(); ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <?php echo $this->tag->stylesheetLink('css/main.css'); ?>
+</head>
+<body>
+    <h1>Hello Phalcon, its working.</h1>
+
+<?php echo $this->tag->javascriptInclude('https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js', false); ?>
+<?php echo $this->tag->javascriptInclude('js/base.js'); ?>
+</body>
+</html>
