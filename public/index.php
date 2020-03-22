@@ -41,7 +41,7 @@ $di->set(
     'url',
     function () {
         $url = new UrlProvider();
-        $url->setBaseUri('/simple-phalcon/'); // if not on subdirectory --> /
+        $url->setBaseUri('/');
         return $url;
     }
 );
