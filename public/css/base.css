@@ -101,6 +101,10 @@ body {
             flex-direction: column;
   }
 }
+.site-page__footer {
+  padding-bottom: 3em;
+  line-height: 1.3;
+}
 .site-page__footer .credits {
   text-align: center;
 }
