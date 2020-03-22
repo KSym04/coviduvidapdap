@@ -2,4 +2,4 @@
 
 /cache/
 /config/development/
-/public/data/*
+/public/data/*.json
