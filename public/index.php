@@ -7,7 +7,14 @@ use Phalcon\Mvc\ViewSimple;
 use Phalcon\Mvc\Url as UrlProvider;
 use Phalcon\Mvc\Application;
 
+if( isset( $_SERVER['HTTPS'] ) ){
+    $protocol = ( $_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off" ) ? "https" : "http";
+} else{
+    $protocol = 'http';
+}
+
 // Defines
+define( 'BASE_URL', $protocol . "://" . $_SERVER['SERVER_NAME'] );
 define( 'BASE_PATH', dirname( __DIR__ ) );
 define( 'APP_PATH', BASE_PATH . '/app' );
 

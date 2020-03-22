@@ -15,6 +15,10 @@ body {
 
             .title {
                 color: $color__white;
+                font-family: $text__title;
+                font-size: 1.7rem;
+                font-weight: 700;
+                text-transform: uppercase;
             }
         }
     }

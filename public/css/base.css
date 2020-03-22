@@ -13,6 +13,10 @@ body {
 }
 .site-page__header-inner .title {
   color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=base.css.map */
