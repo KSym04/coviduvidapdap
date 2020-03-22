@@ -43,7 +43,7 @@ body {
   }
 }
 .site-page__confirmed-cases {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 .site-page__confirmed-cases .is-flex {
   -webkit-box-align: center;
@@ -103,6 +103,15 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+.site-page__table-cases {
+  margin-bottom: 3em;
+}
+.site-page__table-cases table th, .site-page__table-cases table td {
+  padding: 18px !important;
+}
+.site-page__table-cases table th {
+  color: #ffffff !important;
 }
 .site-page__footer {
   padding-bottom: 3em;

@@ -54,7 +54,7 @@ body {
     }
 
     &__confirmed-cases {
-        margin-bottom: 2em;
+        margin-bottom: 1em;
 
         .is-flex {
             align-items: center;
@@ -111,6 +111,20 @@ body {
             .is-flex {
                 flex-wrap: wrap;
                 flex-direction: column;
+            }
+        }
+    }
+
+    &__table-cases {
+        margin-bottom: 3em;
+        
+        table {
+            th, td {
+                padding: 18px !important;
+            }
+
+            th {
+                color: $color__white !important;
             }
         }
     }

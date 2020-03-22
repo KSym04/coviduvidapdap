@@ -115,7 +115,56 @@ echo $this->tag->getDoctype(); ?>
                     </div>
                     <div class="column is-1"></div>
                 </div>
-            </div>
+            </div><!-- .site-page__confirmed-cases -->
+
+            <?php 
+                // Initiate get counts.
+                $ch = curl_init();
+                curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
+                curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+                curl_setopt( $ch, CURLOPT_URL, 'https://corona.lmao.ninja/countries' );
+                $result = curl_exec( $ch );
+                curl_close( $ch );
+
+                $table_obj = json_decode( $result );
+            ?>
+
+            <div class="site-page__table-cases container">
+                <div class="columns">
+                    <div class="column is-1"></div>
+                    <div class="column table-container">
+                        <table class="table is-striped is-narrow is-hoverable is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th class="has-background-grey-light">Country & Other Locations</th>
+                                    <th class="has-background-grey-light">Total Cases</th>
+                                    <th class="has-background-grey-light">New Cases</th>
+                                    <th class="has-background-grey-light">Total Deaths</th>
+                                    <th class="has-background-grey-light">New Deaths</th>
+                                    <th class="has-background-grey-light">Total Recovered</th>
+                                    <th class="has-background-grey-light">Active Cases</th>
+                                    <th class="has-background-grey-light">Serious Critical</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach( $table_obj as $tobj ) : ?>
+                                    <tr>
+                                        <td><?php echo $tobj->country; ?></td>
+                                        <td><?php echo $tobj->cases; ?></td>
+                                        <td><?php echo $tobj->todayCases; ?></td>
+                                        <td><?php echo $tobj->deaths; ?></td>
+                                        <td><?php echo $tobj->todayDeaths; ?></td>
+                                        <td><?php echo $tobj->recovered; ?></td>
+                                        <td><?php echo $tobj->active; ?></td>
+                                        <td><?php echo $tobj->critical; ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="column is-1"></div>
+                </div>
+            </div><!-- .site-page__table-cases -->
 
         </div><!-- .site-page__content-inner -->
     </main><!-- .site-page__content -->
