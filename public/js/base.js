@@ -18,3 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
   });
+
+jQuery(document).ready(function(){
+    jQuery('.site-page__table-cases table').fixedHeaderTable('show');
+});
