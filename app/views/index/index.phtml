@@ -11,11 +11,43 @@ echo $this->tag->getDoctype(); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <?php echo $this->tag->stylesheetLink( 'https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css' ); ?>
     <?php echo $this->tag->stylesheetLink( 'css/base.css' ); ?>
 </head>
 <body>
-    <h1>Hello Phalcon, its working.</h1>
+
+<div class="site-page__wrapper">
+    <div class="site-page__header">
+        <div class="site-page__header-inner">
+            <div class="container is-widescreen">
+                <nav class="navbar is-transparent">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="https://bulma.io">
+                        <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+                        </a>
+                        <div class="navbar-burger burger" data-target="mainNavBar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        </div>
+                    </div>
+
+                    <div id="mainNavBar" class="navbar-menu">
+                        <div class="navbar-start">
+                        </div>
+
+                        <div class="navbar-end">
+                            <a class="navbar-item" href="https://bulma.io/">Info</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+
+</div><!-- .site-page__wrapper -->
 
 <?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js', false ); ?>
 <?php echo $this->tag->javascriptInclude( 'js/base.js' ); ?>
