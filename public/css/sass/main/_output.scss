@@ -167,3 +167,29 @@ body {
         }
     }
 }
+
+.site-main {
+    &__title {
+        display: block;
+        margin-bottom: 20px;
+        font-family: $text__title;
+        font-weight: 700;
+        font-size: 7em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 991px) {
+        &__title {
+            display: block;
+            font-size: 6em;
+        }     
+    }
+
+    @media (max-width: 768px) {
+        &__title {
+            display: block;
+            font-size: 4.5em;
+        }     
+    }
+}

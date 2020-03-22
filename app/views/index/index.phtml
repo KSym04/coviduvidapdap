@@ -89,6 +89,7 @@ echo $this->tag->getDoctype(); ?>
             <div class="site-page__welcome-msg container is-widescreen">
                 <div class="columns">
                     <div class="column is-full">
+                        <h1 class="site-main__title">Global</h1>
                         <div class="tags are-medium">
                             <span class="tag">Novel Coronavirus COVID-19 <br /> Pandemic Total Cases</span>
                         </div>
@@ -106,7 +107,7 @@ echo $this->tag->getDoctype(); ?>
                     </div>
 
                     <div class="column main-cases">
-                        <h1 class="title">Confirmed Cases</h1>
+                        <h3 class="title">Confirmed Cases</h3>
                         <span class="maincounter has-text-dark"><?php echo number_format( $current_counts_obj->cases ); ?></span>
                     </div>
 
