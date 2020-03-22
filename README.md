@@ -20,3 +20,4 @@ Please feel free to contribute pull requests or create issues for bugs and featu
 ### Libraries ###
 
 * <a href="https://bulma.io/">Bulma</a>
+* <a href="https://fontawesome.com/">Font Awesome</a>

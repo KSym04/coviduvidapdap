@@ -1,6 +1,6 @@
 html {
   overflow-y: scroll;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 body {
@@ -20,6 +20,13 @@ body {
 }
 .site-page__welcome-msg .tag {
   margin: 60px auto 30px;
+}
+.site-page__footer .credits {
+  text-align: center;
+}
+.site-page__footer .credits svg,
+.site-page__footer .credits span {
+  color: #ff0000;
 }
 
 /*# sourceMappingURL=base.css.map */

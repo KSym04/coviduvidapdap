@@ -6,28 +6,32 @@ use Phalcon\Mvc\View;
 use Phalcon\Mvc\ViewSimple;
 use Phalcon\Mvc\Url as UrlProvider;
 use Phalcon\Mvc\Application;
+use Phalcon\Mvc\Router;
+use Phalcon\Mvc\Dispatcher as PhDispatcher;
+use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
 
+// Detect protocols.
 if( isset( $_SERVER['HTTPS'] ) ){
     $protocol = ( $_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off" ) ? "https" : "http";
 } else{
     $protocol = 'http';
 }
 
-// Defines
+// Defines & helpers.
 define( 'BASE_URL', $protocol . "://" . $_SERVER['SERVER_NAME'] );
 define( 'BASE_PATH', dirname( __DIR__ ) );
 define( 'APP_PATH', BASE_PATH . '/app' );
 
+require_once( APP_PATH . '/helpers/snippets.php' );
+require_once( APP_PATH . '/helpers/menu.php' );
+
 // Initialize Loader
 $loader = new Loader();
-
 $loader->registerDirs(
-    [
-        APP_PATH . '/controllers/',
-        APP_PATH . '/models/',
+    [ 
+        APP_PATH . '/controllers/'
     ]
 );
-
 $loader->register();
 
 // Create Dependency Injection
@@ -50,6 +54,23 @@ $di->set(
         $url = new UrlProvider();
         $url->setBaseUri('/');
         return $url;
+    }
+);
+
+// Setup Router.
+$di->set(
+    'router', 
+    function() {
+        $router = new Router();
+        $router->removeExtraSlashes(true);
+
+        // privacy policy.
+        $router->add("/privacy-policy", array(
+            "controller" => 'privacy'
+        ));
+
+        $router->handle();
+        return $router;
     }
 );
 

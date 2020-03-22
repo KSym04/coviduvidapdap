@@ -54,25 +54,9 @@ echo $this->tag->getDoctype(); ?>
     <!-- BEGIN MAIN -->
     <main class="site-page__content">
         <div class="site-page__content-inner">
-            
-            <div class="site-page__welcome-msg container is-widescreen">
-                <div class="columns">
-                    <div class="column is-full">
-                        <div class="tags are-medium">
-                            <span class="tag">Novel Coronavirus COVID-19 Pandemic Total Cases</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="site-page__confirmed-cases container">
                 <div class="columns">
-                    <div class="column">
-                    </div>
-
-                    <div class="column">
-                    </div>
-
                     <div class="column">
                     </div>
                 </div>
@@ -82,26 +66,9 @@ echo $this->tag->getDoctype(); ?>
     </main><!-- .site-page__content -->
     <!-- END MAIN -->
 
-    <!-- BEGIN FOOTER -->
-    <footer class="site-page__footer">
-        <div class="site-page__footer-inner">
-            
-            <div class="site-page__copyright container is-widescreen">
-                <div class="columns">
-                    <div class="column">
-                        <p class="credits"><?php printf( 'made with <span class="fas fa-heart"></span> by <a href="https://github.com/KSym04/coviduvidapdap">%s</a> <br /> <sub>Keep Safe Everyone!</sub>', 'Ken' ); ?></p>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- .site-page__footer-inner -->
-    </footer><!-- .site-page__footer -->
-    <!-- END FOOTER -->
-
 </div><!-- .site-page__wrapper -->
 
 <?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js', false ); ?>
-<?php echo $this->tag->javascriptInclude( 'https://use.fontawesome.com/releases/v5.3.1/js/all.js', false ); ?>
 <?php echo $this->tag->javascriptInclude( 'js/base.js' ); ?>
 </body>
 </html>
