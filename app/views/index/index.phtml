@@ -59,7 +59,7 @@ echo $this->tag->getDoctype(); ?>
                 <div class="columns">
                     <div class="column is-full">
                         <div class="tags are-medium">
-                            <span class="tag">Novel Coronavirus COVID-19 Pandemic Total Cases</span>
+                            <span class="tag">Novel Coronavirus COVID-19 <br /> Pandemic Total Cases</span>
                         </div>
                     </div>
                 </div>
@@ -78,9 +78,9 @@ echo $this->tag->getDoctype(); ?>
             ?>
 
             <div class="site-page__confirmed-cases container">
-                <div class="columns">
+                <div class="columns is-flex">
                     <div class="column is-1"></div>
-                    <div class="column">
+                    <div class="column sub-cases">
                         <h3 class="subtitle has-text-success">Recovered</h3>
                         <span class="subcounter has-text-grey"><?php echo number_format( $current_counts_obj->recovered ); ?></span>
                     </div>
@@ -90,7 +90,7 @@ echo $this->tag->getDoctype(); ?>
                         <span class="maincounter has-text-dark"><?php echo number_format( $current_counts_obj->cases ); ?></span>
                     </div>
 
-                    <div class="column">
+                    <div class="column sub-cases">
                         <h3 class="subtitle has-text-danger">Deaths</h3>
                         <span class="subcounter has-text-grey"><?php echo number_format( $current_counts_obj->deaths ); ?></span>
                     </div>

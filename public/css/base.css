@@ -24,8 +24,31 @@ body {
 .site-page__welcome-msg .tag {
   margin: 60px auto 30px;
 }
+.site-page__welcome-msg .tag br {
+  display: none;
+}
+@media (max-width: 991px) {
+  .site-page__welcome-msg .tag {
+    display: block;
+    text-align: center;
+    height: auto;
+    line-height: 1.2;
+    padding: 0.7em 1em 0.6em;
+  }
+  .site-page__welcome-msg .tag br {
+    display: block;
+  }
+}
 .site-page__confirmed-cases {
   margin-bottom: 2em;
+}
+.site-page__confirmed-cases .is-flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .site-page__confirmed-cases .title,
 .site-page__confirmed-cases .subtitle {
@@ -45,6 +68,38 @@ body {
 }
 .site-page__confirmed-cases .subcounter {
   font-size: 3rem;
+}
+@media (max-width: 991px) {
+  .site-page__confirmed-cases .title,
+  .site-page__confirmed-cases .subtitle {
+    margin-bottom: 1rem;
+  }
+  .site-page__confirmed-cases .title {
+    font-size: 1.5rem;
+  }
+  .site-page__confirmed-cases .is-1 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .site-page__confirmed-cases .main-cases {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .site-page__confirmed-cases .sub-cases {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .site-page__confirmed-cases .is-flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .site-page__footer .credits {
   text-align: center;
