@@ -24,6 +24,10 @@ body {
 .site-page__header-inner .main-logo:hover {
   background-color: transparent !important;
 }
+.site-page__header-inner strong {
+  display: inline-block;
+  margin-right: 10px;
+}
 .site-page__welcome-msg .tag {
   margin: 0 auto 0;
 }

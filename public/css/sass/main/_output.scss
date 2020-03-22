@@ -26,6 +26,19 @@ body {
             .main-logo:hover {
                 background-color: transparent !important;
             }
+
+            strong {
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            &-inner {
+                strong {
+                    display: none;
+                }
+            }
         }
     }
 
