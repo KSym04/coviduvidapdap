@@ -1,0 +1,11 @@
+.site-page {
+    &__header {
+        &-inner {
+            background-color: $color__dark;
+
+            .title {
+                color: $color__white;
+            }
+        }
+    }
+}

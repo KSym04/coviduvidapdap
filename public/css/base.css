@@ -1,3 +1,8 @@
-
+.site-page__header-inner {
+  background-color: #363636;
+}
+.site-page__header-inner .title {
+  color: #ffffff;
+}
 
 /*# sourceMappingURL=base.css.map */
