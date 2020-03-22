@@ -20,12 +20,42 @@ body {
                 font-weight: 700;
                 text-transform: uppercase;
             }
+
+            .main-logo:hover {
+                background-color: transparent !important;
+            }
         }
     }
 
     &__welcome-msg {
         .tag {
             margin: 60px auto 30px;
+        }
+    }
+
+    &__confirmed-cases {
+        margin-bottom: 4em;
+
+        .title, 
+        .subtitle {
+            font-family: $text__title;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .maincounter,
+        .subcounter {
+            display: block;
+            line-height: 1;
+            text-align: center;
+        }
+
+        .maincounter {
+            font-size: 3.25rem;
+        }
+
+        .subcounter {
+            font-size: 3rem;
         }
     }
 

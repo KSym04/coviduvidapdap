@@ -10,6 +10,8 @@ use Phalcon\Mvc\Router;
 use Phalcon\Mvc\Dispatcher as PhDispatcher;
 use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
 
+ini_set( "allow_url_fopen", 1 );
+
 // Detect protocols.
 if( isset( $_SERVER['HTTPS'] ) ){
     $protocol = ( $_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off" ) ? "https" : "http";

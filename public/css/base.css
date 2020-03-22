@@ -18,8 +18,32 @@ body {
   font-weight: 700;
   text-transform: uppercase;
 }
+.site-page__header-inner .main-logo:hover {
+  background-color: transparent !important;
+}
 .site-page__welcome-msg .tag {
   margin: 60px auto 30px;
+}
+.site-page__confirmed-cases {
+  margin-bottom: 4em;
+}
+.site-page__confirmed-cases .title,
+.site-page__confirmed-cases .subtitle {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+.site-page__confirmed-cases .maincounter,
+.site-page__confirmed-cases .subcounter {
+  display: block;
+  line-height: 1;
+  text-align: center;
+}
+.site-page__confirmed-cases .maincounter {
+  font-size: 3.25rem;
+}
+.site-page__confirmed-cases .subcounter {
+  font-size: 3rem;
 }
 .site-page__footer .credits {
   text-align: center;
