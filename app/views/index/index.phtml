@@ -73,16 +73,6 @@ echo $this->tag->getDoctype(); ?>
     <!-- BEGIN MAIN -->
     <main class="site-page__content">
         <div class="site-page__content-inner">
-            
-            <div class="site-page__welcome-msg container is-widescreen">
-                <div class="columns">
-                    <div class="column is-full">
-                        <div class="tags are-medium">
-                            <span class="tag">Novel Coronavirus COVID-19 <br /> Pandemic Total Cases</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <?php 
                 // Initiate get counts.
@@ -95,6 +85,17 @@ echo $this->tag->getDoctype(); ?>
 
                 $current_counts_obj = json_decode( $result );
             ?>
+            
+            <div class="site-page__welcome-msg container is-widescreen">
+                <div class="columns">
+                    <div class="column is-full">
+                        <div class="tags are-medium">
+                            <span class="tag">Novel Coronavirus COVID-19 <br /> Pandemic Total Cases</span>
+                        </div>
+                        <time datetime="<?php echo date( 'Y-m-d', time( $current_counts_obj->updated ) ); ?>"><?php echo date( '\a\s \of F j, Y, g:i A', time( $current_counts_obj->updated ) ); ?></time>
+                    </div>
+                </div>
+            </div>
 
             <div class="site-page__confirmed-cases container">
                 <div class="columns is-flex">
@@ -151,9 +152,9 @@ echo $this->tag->getDoctype(); ?>
                                     <tr>
                                         <td><?php echo $tobj->country; ?></td>
                                         <td><?php echo $tobj->cases; ?></td>
-                                        <td><?php echo $tobj->todayCases; ?></td>
+                                        <?php echo notificationsCheck( $tobj->todayCases, 'has-text-dark has-background-warning' ); ?>
                                         <td><?php echo $tobj->deaths; ?></td>
-                                        <td><?php echo $tobj->todayDeaths; ?></td>
+                                        <?php echo notificationsCheck( $tobj->todayDeaths, 'has-text-white has-background-danger' ); ?>
                                         <td><?php echo $tobj->recovered; ?></td>
                                         <td><?php echo $tobj->active; ?></td>
                                         <td><?php echo $tobj->critical; ?></td>

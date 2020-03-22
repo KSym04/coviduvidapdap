@@ -31,12 +31,20 @@ body {
 
     &__welcome-msg {
         .tag {
-            margin: 0 auto 30px;
+            margin: 0 auto 0;
 
             br {
                 display: none;
             }
         }
+
+        time {
+            margin: 0 auto 40px;
+            font-size: 0.845rem;
+            text-align: center;
+            display: block;
+        }
+
 
         @media (max-width: 991px) {
             .tag {
@@ -119,11 +127,14 @@ body {
         margin-bottom: 3em;
         
         table {
+            border-bottom: 1px solid $color__lightgrey;
+
             th, td {
                 padding: 18px 20px !important;
             }
 
             th {
+                font-family: $text__title;
                 color: $color__white !important;
             }
         }

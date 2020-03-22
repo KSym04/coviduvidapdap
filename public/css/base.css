@@ -25,10 +25,16 @@ body {
   background-color: transparent !important;
 }
 .site-page__welcome-msg .tag {
-  margin: 0 auto 30px;
+  margin: 0 auto 0;
 }
 .site-page__welcome-msg .tag br {
   display: none;
+}
+.site-page__welcome-msg time {
+  margin: 0 auto 40px;
+  font-size: 0.845rem;
+  text-align: center;
+  display: block;
 }
 @media (max-width: 991px) {
   .site-page__welcome-msg .tag {
@@ -107,10 +113,14 @@ body {
 .site-page__table-cases {
   margin-bottom: 3em;
 }
+.site-page__table-cases table {
+  border-bottom: 1px solid #dbdbdb;
+}
 .site-page__table-cases table th, .site-page__table-cases table td {
-  padding: 18px !important;
+  padding: 18px 20px !important;
 }
 .site-page__table-cases table th {
+  font-family: "Quicksand", sans-serif;
   color: #ffffff !important;
 }
 .site-page__footer {
