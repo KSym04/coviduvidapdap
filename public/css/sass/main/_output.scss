@@ -166,6 +166,12 @@ body {
             }
         }
     }
+
+    @media (max-width: 768px) {
+        &__header {
+            margin-bottom: 30px;
+        }
+    } 
 }
 
 .site-main {

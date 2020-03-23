@@ -31,5 +31,11 @@
                 margin-left: 20px;
             }
         }
-    }    
+    }
+
+    @media (max-width: 768px) {
+        &__default {
+            padding: 0 20px;
+        }    
+    }
 }
