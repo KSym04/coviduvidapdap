@@ -10,6 +10,7 @@ use Phalcon\Mvc\Router;
 use Phalcon\Mvc\Dispatcher as PhDispatcher;
 use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
 
+date_default_timezone_set( 'Asia/Manila' );
 ini_set( "allow_url_fopen", 1 );
 
 // Detect protocols.
