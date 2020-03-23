@@ -10,7 +10,12 @@ defined( 'BASE_PATH' ) || exit;
 function headerMeta() {
     return '<meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">';
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link rel="dns-prefetch" href="//coviduvidapdap.com" />
+            <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+            <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+            <link rel="dns-prefetch" href="//use.fontawesome.com" />
+            <link rel="dns-prefetch" href="//ajax.cloudflare.com" />';
 }
 
 /**
