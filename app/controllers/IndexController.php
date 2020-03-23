@@ -6,7 +6,7 @@ class IndexController extends Controller
 {
     public function initialize()
     {
-        $this->tag->setTitle( 'Coviduvidapdap' );
+        $this->tag->setTitle( 'Coviduvidapdap - 🦠 Novel coronavirus tracker, cases updates, statistics and charts' );
     }
 
     public function indexAction()
