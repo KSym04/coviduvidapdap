@@ -1,0 +1,35 @@
+.site-page {
+    &__default {
+        margin-bottom: 3em;
+
+        h1, h2, h3 {
+            font-family: $text__title;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin: 0 auto 0.5em;
+        }
+
+        h2 {
+            font-size: 1.75em;
+            font-weight: 600;
+            margin: 1em auto 0.3em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        ul {
+            padding-left: 15px;
+            margin-bottom: 20px;
+
+            li {
+                list-style: disc;
+                margin-left: 20px;
+            }
+        }
+    }    
+}
