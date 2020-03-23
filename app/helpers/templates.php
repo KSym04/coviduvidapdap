@@ -9,7 +9,7 @@ defined( 'BASE_PATH' ) || exit;
  */
 function headerMeta() {
     return '<meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <meta name="msvalidate.01" content="35923DE3BC3807594902A174663F28B9" />
             <link rel="dns-prefetch" href="//coviduvidapdap.com" />

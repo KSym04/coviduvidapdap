@@ -18,7 +18,7 @@ Please feel free to contribute pull requests or create issues for bugs and featu
 
 ### Sources ###
 
-* JHU - https://github.com/CSSEGISandData/COVID-19 - Data repository operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE).
+* JHU CSSE - https://github.com/CSSEGISandData/COVID-19 - Data repository operated by the Johns Hopkins University Center for Systems Science and Engineering.
 * NovelCOVID API - https://github.com/NovelCOVID/API - based on top of <a href="https://www.worldometers.info/coronavirus/">Worldometers</a>
 
 ### Libraries ###

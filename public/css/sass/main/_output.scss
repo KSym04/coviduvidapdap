@@ -4,6 +4,7 @@
 
 html {
     overflow-y: scroll;
+    overflow-x: hidden;
     font-size: 15px;
 }
 
@@ -61,7 +62,6 @@ body {
             text-align: center;
             display: block;
         }
-
 
         @media (max-width: 991px) {
             .tag {
