@@ -12,7 +12,7 @@ echo $this->tag->getDoctype(); ?>
     <?php echo showFavicon(); ?>
     <?php echo $this->tag->stylesheetLink( 'https://fonts.googleapis.com/css?family=Montserrat|Quicksand:400,500,600,700&display=swap' ); ?>
     <?php echo $this->tag->stylesheetLink( 'https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css' ); ?>
-    <?php echo $this->tag->stylesheetLink( 'css/base.css' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'css/base.css?v=' . time() ); ?>
 </head>
 <body>
 <div class="site-page__wrapper">
@@ -155,6 +155,6 @@ echo $this->tag->getDoctype(); ?>
 <?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js', false ); ?>
 <?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery-throttle-debounce@1.0.0/jquery.ba-throttle-debounce.min.js', false ); ?>
 <?php echo $this->tag->javascriptInclude( 'js/jquery.stickyheader.js' ); ?>
-<?php echo $this->tag->javascriptInclude( 'js/base.js' ); ?>
+<?php echo $this->tag->javascriptInclude( 'js/base.js?v=' . time() ); ?>
 </body>
 </html>
