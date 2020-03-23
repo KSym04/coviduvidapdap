@@ -138,6 +138,7 @@ body {
 
     &__table-cases {
         margin-bottom: 2em;
+        padding: 0 20px;
         
         table {
             border-bottom: 1px solid $color__lightgrey;
@@ -149,7 +150,15 @@ body {
             th {
                 font-family: $text__title;
                 color: $color__white !important;
+                background-color: $color__bitgrey;
+                line-height: 1.3;
             }
+        }
+
+        .sticky-intersect th {
+            display: block !important;
+            min-width: 136px !important;
+            background-color: $color__darkgrey;
         }
     }
 

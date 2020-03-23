@@ -109,7 +109,7 @@ echo $this->tag->getDoctype(); ?>
                                      $get_total_critical    = 0;
                                      foreach( $table_obj as $tobj ) : ?>
                                     <tr>
-                                        <td><?php echo $tobj->country; ?></td>
+                                        <th><?php echo $tobj->country; ?></th>
                                         <td><?php echo number_format( $tobj->cases ); ?></td>
                                         <?php echo notificationsCheck( $tobj->todayCases, 'has-text-dark has-background-warning' ); ?>
                                         <td><?php echo number_format( $tobj->deaths ); ?></td>
@@ -128,10 +128,8 @@ echo $this->tag->getDoctype(); ?>
                                         $get_total_critical   = $get_total_critical + $tobj->critical;
                                     ?>
                                 <?php endforeach; ?>
-                            </tbody>
-                            <tfoot>
                                 <tr>
-                                    <td class="has-background-grey-lighter"><strong class="has-text-dark">TOTAL</strong></td>
+                                    <th class="has-background-grey-dark"><strong class="has-text-white">TOTAL</strong></th>
                                     <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_cases ); ?></strong></td>
                                     <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_todayCases ); ?></strong></td>
                                     <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_deaths ); ?></strong></td>
@@ -140,7 +138,7 @@ echo $this->tag->getDoctype(); ?>
                                     <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_active ); ?></strong></td>
                                     <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_critical ); ?></strong></td>
                                 </tr>
-                            </tfoot>
+                            </tbody>
                         </table>
                     </div>
                     <div class="column is-1"></div>
@@ -157,7 +155,8 @@ echo $this->tag->getDoctype(); ?>
 
 <?php echo $this->tag->javascriptInclude( 'https://use.fontawesome.com/releases/v5.3.1/js/all.js', false ); ?>
 <?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js', false ); ?>
-<?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/sticky-table-headers@0.1.24/js/jquery.stickytableheaders.min.js', false ); ?>
+<?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery-throttle-debounce@1.0.0/jquery.ba-throttle-debounce.min.js', false ); ?>
+<?php echo $this->tag->javascriptInclude( 'js/jquery.stickyheader.js' ); ?>
 <?php echo $this->tag->javascriptInclude( 'js/base.js' ); ?>
 </body>
 </html>

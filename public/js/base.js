@@ -1,3 +1,7 @@
+jQuery(document).ready(function(){
+
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -17,8 +21,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   
-  });
-
-jQuery(document).ready(function(){
-    jQuery('.site-page__table-cases table').stickyTableHeaders();
 });
