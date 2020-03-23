@@ -3,3 +3,5 @@
 /cache/
 /config/development/
 /public/data/*.json
+/public/robots.txt
+/public/sitemap.xml

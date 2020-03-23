@@ -1,6 +1,9 @@
 # Set Default Charset
 AddDefaultCharset UTF-8
 
+# Prevent Directory Listing
+Options -Indexes
+
 # Routes
 <IfModule mod_rewrite.c>
     RewriteEngine On
