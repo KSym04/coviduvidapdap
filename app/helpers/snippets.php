@@ -30,7 +30,7 @@ function getNewData( $url, $file_name ) {
     }
 
     $ch = curl_init();
-    $fp = fopen( BASE_PATH . "/public/data/" . $file_name . ".json", "w+" );
+    $fp = fopen( BASE_PATH . "/public/data/" . $file_name . "-" . $GLOBALS['dateset'] . ".json", "w+" );
     curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
     curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
     curl_setopt( $ch, CURLOPT_FILE, $fp );
