@@ -11,6 +11,7 @@ function headerMeta() {
     return '<meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="msvalidate.01" content="35923DE3BC3807594902A174663F28B9" />
             <link rel="dns-prefetch" href="//coviduvidapdap.com" />
             <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
             <link rel="dns-prefetch" href="//fonts.googleapis.com" />
