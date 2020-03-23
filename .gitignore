@@ -1,6 +1,7 @@
 *desktop.ini
 /cache/
 /config/development/
+/public/data/*
 /public/data/
 /public/robots.txt
 /public/sitemap.xml
