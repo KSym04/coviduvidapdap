@@ -4,6 +4,8 @@
 
 Novel coronavirus tracker, statistics, news, updates & charts
 
+![Covid-19 Cases](https://covid19-badges.herokuapp.com/cases/latest) ![Recovered](https://covid19-badges.herokuapp.com/recovered) ![Deaths](https://covid19-badges.herokuapp.com/deaths)
+
 ## Contribute ##
 
 Please feel free to contribute pull requests or create issues for bugs and feature requests.
