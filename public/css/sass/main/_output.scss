@@ -160,6 +160,12 @@ body {
             min-width: 136px !important;
             background-color: $color__darkgrey;
         }
+
+        @media (max-width: 768px) {
+            .is-1 {
+                display: none;
+            }
+        }
     }
 
     &__footer {
