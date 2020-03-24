@@ -35,9 +35,11 @@ function getNewData( $url, $file_name ) {
     curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
     curl_setopt( $ch, CURLOPT_FILE, $fp );
     curl_setopt( $ch, CURLOPT_URL, $url );
-    curl_exec( $ch );
+    $result = curl_exec( $ch );
     curl_close( $ch );
     fclose( $fp );
+
+    return $result;
 }
 
 /**

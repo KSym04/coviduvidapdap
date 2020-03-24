@@ -82,9 +82,20 @@ function footerContents() {
                     
                     <div class="site-page__copyright container is-widescreen">
                         <div class="columns">
+                            <div class="column is-1"></div>
                             <div class="column">
-                                <p class="credits">' . sprintf( 'made with <span class="fas fa-heart"></span> by <a href="https://github.com/KSym04/coviduvidapdap" target="_blank" rel="nofollow noopener">%s</a> <br /> <sub>Keep Safe Everyone!</sub>', 'Ken' ) . '</p>
+                                <p class="credits footer-blurb">' . sprintf( 'made with <span class="fas fa-heart"></span> by <a href="https://github.com/KSym04/coviduvidapdap" target="_blank" rel="nofollow noopener">%s</a> <br /> <sub>Keep Safe Everyone!</sub>', 'Ken' ) . '</p>
                             </div>
+                            <div class="column">
+                                <p class="credits footer-nav">' . 
+                                    sprintf( '<a href="%1$s">%2$s</a> <br /> <sub>BTC Tips: <a href="%3$s" target="_blank" rel="nofollow noopener">%4$s</a></sub>', 
+                                        BASE_URL . '/privacy', 
+                                        'Privacy',
+                                        'https://www.blockchain.com/btc/address/1PFTxz29vUh4BRhrRq8Gy9TxQNUTnLm3js',
+                                        '1PFTxz29vUh4BRhrRq8Gy9TxQNUTnLm3js' ) . 
+                                '</p>
+                            </div>
+                            <div class="column is-1"></div>
                         </div>
                     </div>
 
