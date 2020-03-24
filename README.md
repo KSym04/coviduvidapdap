@@ -26,6 +26,6 @@ Please feel free to contribute pull requests or create issues for bugs and featu
 * <a href="https://bulma.io/">Bulma</a>
 * <a href="https://fontawesome.com/">Font Awesome</a>
 
-### Buy me a beer ###
+### Treat me a beer ###
 
 BTC Tips: <a href="https://www.blockchain.com/btc/address/1PFTxz29vUh4BRhrRq8Gy9TxQNUTnLm3js">1PFTxz29vUh4BRhrRq8Gy9TxQNUTnLm3js</a>

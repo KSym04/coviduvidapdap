@@ -172,7 +172,7 @@ body {
             background-color: $color__darkgrey !important;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1220px) {
             .is-1 {
                 display: none;
             }
@@ -205,19 +205,23 @@ body {
             }
         }
 
-        @media (max-width: 768px) {
-            padding-left: 20px;
-            padding-right: 20px;
-
+        @media (max-width: 1220px) {
             .is-1 {
                 display: none;
             }
+        }
 
+        @media (max-width: 768px) {
             .footer-blurb,
             .footer-nav {
                 text-align: center;
             }
         }
+    }
+
+    &__copyright {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     @media (max-width: 768px) {

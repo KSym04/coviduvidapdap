@@ -151,7 +151,7 @@ body {
 .site-page__table-cases .axis-header {
   background-color: #666666 !important;
 }
-@media (max-width: 768px) {
+@media (max-width: 1220px) {
   .site-page__table-cases .is-1 {
     display: none;
   }
@@ -176,18 +176,20 @@ body {
 .site-page__footer .footer-nav > a {
   font-size: smaller;
 }
-@media (max-width: 768px) {
-  .site-page__footer {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+@media (max-width: 1220px) {
   .site-page__footer .is-1 {
     display: none;
   }
+}
+@media (max-width: 768px) {
   .site-page__footer .footer-blurb,
   .site-page__footer .footer-nav {
     text-align: center;
   }
+}
+.site-page__copyright {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media (max-width: 768px) {
   .site-page__header {

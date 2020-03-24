@@ -80,7 +80,7 @@ function footerContents() {
             <footer class="site-page__footer">
                 <div class="site-page__footer-inner">
                     
-                    <div class="site-page__copyright container is-widescreen">
+                    <div class="site-page__copyright container">
                         <div class="columns">
                             <div class="column is-1"></div>
                             <div class="column">
