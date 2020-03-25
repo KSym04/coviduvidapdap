@@ -12,7 +12,7 @@ function headerMeta() {
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <meta name="msvalidate.01" content="35923DE3BC3807594902A174663F28B9" />
-            <meta name="description" content="Novel coronavirus tracker, cases updates, statistics, charts, wiki and helpful resources">
+            <meta name="description" content="Novel coronavirus tracker, cases updates, alerts, statistics, charts, wiki and helpful resources">
             <link rel="dns-prefetch" href="//coviduvidapdap.com" />
             <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
             <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -85,7 +85,7 @@ function footerContents() {
                         <div class="columns">
                             <div class="column is-1"></div>
                             <div class="column">
-                                <p class="credits footer-blurb">' . sprintf( 'made with <span class="fas fa-heart"></span> by <a href="https://github.com/KSym04/coviduvidapdap" target="_blank" rel="nofollow noopener">%s</a> <br /> <sub>Keep Safe Everyone!</sub>', 'Ken' ) . '</p>
+                                <p class="credits footer-blurb">' . sprintf( 'made with <span class="fas fa-heart"></span> <br /> <sub>Keep Safe Everyone!</sub>', 'Ken' ) . '</p>
                             </div>
                             <div class="column">
                                 <p class="credits footer-nav">' . 
