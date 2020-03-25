@@ -3,30 +3,30 @@
 use Phalcon\Mvc\Controller;
 
 /**
- * Privacy Controller class.
+ * Disclaimer Controller class.
  * 
- * @since 1.0.1
+ * @since 1.0.6
  */
-class PrivacyController extends Controller
+class DisclaimerController extends Controller
 {
 
     /**
      * Initialize page.
      * 
-     * @since  1.0.1
+     * @since  1.0.6
      * @access public
      * 
      * @return void
      */
     public function initialize()
     {
-        $this->tag->setTitle( 'Privacy Policy / Coviduvidapdap' );
+        $this->tag->setTitle( 'Disclaimer / Coviduvidapdap' );
     }
 
     /**
      * Index actions.
      * 
-     * @since  1.0.1
+     * @since  1.0.6
      * @access public
      * 
      * @return void

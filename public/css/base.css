@@ -173,6 +173,20 @@ body {
 .site-page__footer .footer-nav {
   text-align: right;
 }
+.site-page__footer .footer-nav ul {
+  padding: 0;
+  margin: 0;
+}
+.site-page__footer .footer-nav ul li:first-child {
+  margin-left: 0;
+}
+.site-page__footer .footer-nav ul li {
+  display: inline-block;
+  margin-left: 8px;
+}
+.site-page__footer .footer-nav ul li a {
+  font-size: 13px;
+}
 .site-page__footer .footer-nav > a {
   font-size: smaller;
 }
@@ -219,6 +233,30 @@ body {
   }
 }
 
+.header-nav__wiki .navbar {
+  background-color: transparent;
+}
+.header-nav__wiki .navbar.is-primary
+.navbar-item.has-dropdown:hover
+.navbar-link {
+  background-color: none !important;
+}
+.header-nav__wiki .wiki-separator {
+  padding: 0 15px 0 0;
+}
+.header-nav__wiki p .txt {
+  font-size: 11px;
+}
+@media (max-width: 768px) {
+  .header-nav__wiki .wiki-separator {
+    padding: 0;
+    border-top: 1px solid #dbdbdb;
+  }
+  .header-nav__wiki p {
+    padding: 0 15px 15px;
+  }
+}
+
 .site-page__default {
   margin-bottom: 3em;
 }
@@ -246,6 +284,10 @@ body {
 .site-page__default ul li {
   list-style: disc;
   margin-left: 20px;
+}
+.site-page__default em {
+  font-family: 'Georgia', serif;
+  color: #666666;
 }
 @media (max-width: 768px) {
   .site-page__default {

@@ -4,9 +4,9 @@ use Phalcon\Loader;
 use Phalcon\Di\FactoryDefault;
 use Phalcon\Mvc\View;
 use Phalcon\Mvc\ViewSimple;
-use Phalcon\Mvc\Url as UrlProvider;
 use Phalcon\Mvc\Application;
 use Phalcon\Mvc\Router;
+use Phalcon\Mvc\Url as UrlProvider;
 use Phalcon\Mvc\Dispatcher as PhDispatcher;
 use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
 
@@ -14,7 +14,7 @@ date_default_timezone_set( 'Asia/Manila' );
 ini_set( "allow_url_fopen", 1 );
 
 $GLOBALS['dateset'] = date( "Y-m-d", time() );
-$GLOBALS['siteversion'] = '1.0.5';
+$GLOBALS['siteversion'] = '1.0.6';
 
 // Detect protocols.
 if( isset( $_SERVER['HTTPS'] ) ){
@@ -70,19 +70,60 @@ $di->set(
         $router = new Router();
         $router->removeExtraSlashes(true);
 
-        // privacy policy.
-        $router->add("/privacy-policy", array(
-            "controller" => 'privacy'
-        ));
-
         // fetch.
         $router->add("/fetch", array(
             "controller" => 'fetch'
         ));
 
+        // privacy policy.
+        $router->add("/privacy-policy", array(
+            "controller" => 'privacy'
+        ));
+
+        // disclaimer.
+        $router->add("/disclaimer", array(
+            "controller" => 'disclaimer'
+        ));
+
+        // wiki - myth-busters.
+        $router->add("/myth-busters", array(
+            "controller" => 'mythbusters'
+        ));
+
         $router->handle();
         return $router;
     }
+);
+
+// Setup Error Notice.
+$di->set(
+    'dispatcher',
+    function() use ($di) {
+
+        $evManager = $di->getShared('eventsManager');
+
+        $evManager->attach(
+            "dispatch:beforeException",
+            function($event, $dispatcher, $exception)
+            {
+                switch ($exception->getCode()) {
+                    case PhDispatcher::EXCEPTION_HANDLER_NOT_FOUND:
+                    case PhDispatcher::EXCEPTION_ACTION_NOT_FOUND:
+                        $dispatcher->forward(
+                            array(
+                                'controller' => 'error',
+                                'action'     => 'show404',
+                            )
+                        );
+                        return false;
+                }
+            }
+        );
+        $dispatcher = new PhDispatcher();
+        $dispatcher->setEventsManager($evManager);
+        return $dispatcher;
+    },
+    true
 );
 
 // Incoming Request Handlers

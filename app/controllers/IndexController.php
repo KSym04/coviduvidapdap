@@ -2,13 +2,35 @@
 
 use Phalcon\Mvc\Controller;
 
+/**
+ * Index Controller class.
+ * 
+ * @since 1.0.0
+ */
 class IndexController extends Controller
 {
+
+    /**
+     * Initialize page.
+     * 
+     * @since  1.0.0
+     * @access public
+     * 
+     * @return void
+     */
     public function initialize()
     {
         $this->tag->setTitle( 'Coviduvidapdap - Novel coronavirus tracker, cases updates, alerts, statistics, charts, wiki and helpful resources' );
     }
 
+    /**
+     * Index actions.
+     * 
+     * @since  1.0.0
+     * @access public
+     * 
+     * @return void
+     */
     public function indexAction()
     {
         // All.
@@ -29,4 +51,5 @@ class IndexController extends Controller
 
         $this->view->setVar( "table_obj",  $countries_obj );
     }
+
 }

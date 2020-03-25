@@ -1,3 +1,41 @@
+.header-nav {
+    &__wiki {
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar.is-primary 
+        .navbar-item.has-dropdown:hover 
+        .navbar-link {
+            background-color: none !important;
+        }
+        
+        .wiki-separator {
+            padding: 0 15px 0 0;
+        }
+
+        p {
+            .txt {
+                font-size: 11px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__wiki {
+            .wiki-separator {
+                padding: 0;
+                border-top: 1px solid $color__lightgrey;
+            }
+
+            p {
+                padding: 0 15px 15px;
+            }
+        }
+    }    
+}
+
 .site-page {
     &__default {
         margin-bottom: 3em;
@@ -31,6 +69,11 @@
                 list-style: disc;
                 margin-left: 20px;
             }
+        }
+
+        em {
+            font-family: 'Georgia', serif;
+            color: $color__darkgrey;
         }
     }
 

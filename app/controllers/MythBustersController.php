@@ -3,30 +3,29 @@
 use Phalcon\Mvc\Controller;
 
 /**
- * Privacy Controller class.
+ * Myth Busters Controller class.
  * 
- * @since 1.0.1
+ * @since 1.0.6
  */
-class PrivacyController extends Controller
+class MythBustersController extends Controller
 {
-
     /**
      * Initialize page.
      * 
-     * @since  1.0.1
+     * @since  1.0.6
      * @access public
      * 
      * @return void
      */
     public function initialize()
     {
-        $this->tag->setTitle( 'Privacy Policy / Coviduvidapdap' );
+        $this->tag->setTitle( 'Covid-19 Myth Busters / Coviduvidapdap' );
     }
 
     /**
      * Index actions.
      * 
-     * @since  1.0.1
+     * @since  1.0.6
      * @access public
      * 
      * @return void

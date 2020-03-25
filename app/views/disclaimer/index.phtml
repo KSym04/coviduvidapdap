@@ -1,0 +1,94 @@
+<?php
+
+use Phalcon\Tag;
+
+// Set Document Type
+$this->tag->setDoctype(Tag::HTML5);
+echo $this->tag->getDoctype(); ?>
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+<head>
+    <?php echo $this->tag->getTitle(); ?>
+    <?php echo headerMeta(); ?>
+    <?php echo showFavicon(); ?>
+    <?php echo $this->tag->stylesheetLink( 'https://fonts.googleapis.com/css?family=Montserrat|Quicksand:400,500,600,700&display=swap' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'css/base.css?v=' . $GLOBALS['siteversion'] ); ?>
+</head>
+<body>
+<div class="site-page__wrapper">
+
+    <!-- BEGIN HEADER -->
+    <div class="site-page__header">
+        <div class="site-page__header-inner">
+            
+            <div class="container is-widescreen">
+                <nav class="navbar is-primary has-shadow is-spaced">
+                    <div class="navbar-brand">
+                        <a class="navbar-item main-logo" href="<?php echo BASE_URL; ?>">
+                            <h3 class="title"><span class="fas fa-plus-square"></span> Coviduvidapdap</h3>
+                        </a>
+                        <div class="navbar-burger burger" data-target="mainNavBar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div id="mainNavBar" class="navbar-menu">
+                        <?php echo displayMenu(); ?>
+                    </div>
+                </nav><!-- .navbar -->
+            </div>
+
+        </div><!-- .site-page__header-inner -->
+    </div><!-- .site-page__header -->
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN -->
+    <main class="site-page__content">
+        <div class="site-page__content-inner">
+
+            <div class="site-page__default container">
+                <div class="columns">
+                    <div class="column is-1"></div>
+                    <div class="column">
+                        <h1>Disclaimer</h1>
+
+                        <p>If you require any more information or have any questions about our site's disclaimer, please feel free to contact us by email at <a href="mailto:privacy@coviduvidapdap.com">privacy@coviduvidapdap.com</a></p>
+
+                        <h2>Disclaimers for Coviduvidapdap</h2>
+
+                        <p>All the information on this website - https://coviduvidapdap.com - is published in good faith and for general information purpose only. Coviduvidapdap does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (Coviduvidapdap), is strictly at your own risk. Coviduvidapdap will not be liable for any losses and/or damages in connection with the use of our website.</p>
+
+                        <p>From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone 'bad'.</p>
+
+                        <p>Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their "Terms of Service" before engaging in any business or uploading any information.</p>
+
+                        <h2>Consent</h2>
+
+                        <p>By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
+
+                        <h2>Update</h2>
+
+                        <p>Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
+                        
+                    </div>
+                    <div class="column is-1"></div>
+                </div>
+            </div>
+
+        </div><!-- .site-page__content-inner -->
+    </main><!-- .site-page__content -->
+    <!-- END MAIN -->
+
+    <?php echo footerContents(); ?>
+
+</div><!-- .site-page__wrapper -->
+
+<?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js', false ); ?>
+<?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery-throttle-debounce@1.0.0/jquery.ba-throttle-debounce.min.js', false ); ?>
+<?php echo $this->tag->javascriptInclude( 'js/jquery.stickyheader.min.js?v=' . $GLOBALS['siteversion'] ); ?>
+<?php echo $this->tag->javascriptInclude( 'js/base.min.js?v=' . $GLOBALS['siteversion'] ); ?>
+</body>
+</html>

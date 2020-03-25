@@ -51,21 +51,32 @@ function showFavicon() {
  * @since 1.0.0
  */
 function displayMenu( $menulist = array() ) {
-    return '<div class="navbar-end is-clearfix">
-                <strong class="has-text-white">Share</strong>
-                <p class="buttons is-pulled-right">
-                    <a href="https://twitter.com/intent/tweet?url=' . BASE_URL . '&text='. urlencode( 'novel coronavirus tracker, statistics & charts #coviduvidapdap #coviubidapdap' ) .'" target="_blank" rel="nofollow noopener" class="button  is-info">
+    return '<div class="navbar-end header-nav__wiki is-clearfix">
+                <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Wiki</a>
+                
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="' . BASE_URL . '/myth-busters">Myth Busters</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="wiki-separator">|</div>
+
+                <p class="buttons is-pulled-left">
+                    <a href="https://twitter.com/intent/tweet?url=https://coviduvidapdap.com/&text='. urlencode( 'Novel coronavirus tracker, cases updates, alerts, statistics, charts, wiki and helpful resources' ) .'" target="_blank" rel="nofollow noopener" class="button is-small is-info" title="Share on Twitter">
                         <span class="icon">
                             <i class="fab fa-twitter"></i>
                         </span>
-                        <span>Twitter</span>
+                        <span class="txt">Twitter</span>
                     </a>
 
-                    <a href="https://www.facebook.com/sharer.php?u=' . BASE_URL . '&t='. urlencode( 'novel coronavirus tracker, statistics & charts #coviduvidapdap #coviubidapdap' ) .'" target="_blank" rel="nofollow noopener" class="button is-link">
+                    <a href="https://www.facebook.com/sharer.php?u=https://coviduvidapdap.com/&t='. urlencode( 'Novel coronavirus tracker, cases updates, alerts, statistics, charts, wiki and helpful resources' ) .'" target="_blank" rel="nofollow noopener" class="button is-link is-small" title="Share on Facebook">
                         <span class="icon">
                             <i class="fab fa-facebook"></i>
                         </span>
-                        <span>Facebook</span>
+                        <span class="txt">Facebook</span>
                     </a>
                 </p>
             </div>';
@@ -85,16 +96,17 @@ function footerContents() {
                         <div class="columns">
                             <div class="column is-1"></div>
                             <div class="column">
-                                <p class="credits footer-blurb">' . sprintf( 'made with <span class="fas fa-heart"></span> <br /> <sub>Keep Safe Everyone!</sub>', 'Ken' ) . '</p>
+                                <p class="credits footer-blurb">' . sprintf( 'made with <span class="fas fa-heart"></span> by <a href="https://github.com/KSym04/coviduvidapdap" target="_blank" rel="nofollow noopener">%s</a> <br /> <sub>Keep Safe Everyone!</sub>', 'Ken' ) . '</p>
                             </div>
                             <div class="column">
-                                <p class="credits footer-nav">' . 
-                                    sprintf( '<a href="%1$s">%2$s</a> <br /> <sub>BTC Tips: <a href="%3$s" target="_blank" rel="nofollow noopener">%4$s</a></sub>', 
-                                        BASE_URL . '/privacy', 
-                                        'Privacy',
-                                        'https://www.blockchain.com/btc/address/1PFTxz29vUh4BRhrRq8Gy9TxQNUTnLm3js',
-                                        '1PFTxz29vUh4BRhrRq8Gy9TxQNUTnLm3js' ) . 
-                                '</p>
+                                <div class="credits footer-nav">
+                                    <ul>
+                                        <li><a href="' . BASE_URL . '/disclaimer">Disclaimer</a></li>
+                                        <li><a href="' . BASE_URL . '/privacy-policy">Privacy</a></li>
+                                    </ul>
+                                
+                                    <sub>BTC Tips: <a href="https://www.blockchain.com/btc/address/1PFTxz29vUh4BRhrRq8Gy9TxQNUTnLm3js" target="_blank" rel="nofollow noopener">1PFTxz29vUh4BRhrRq8Gy9TxQNUTnLm3js</a></sub>
+                                </div>
                             </div>
                             <div class="column is-1"></div>
                         </div>
