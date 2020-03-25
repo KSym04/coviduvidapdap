@@ -86,7 +86,7 @@ $di->set(
         ));
 
         // wiki - mythbusters.
-        $router->add("/mythbusters", array(
+        $router->add("/myth-busters", array(
             "controller" => 'mythbusters'
         ));
 

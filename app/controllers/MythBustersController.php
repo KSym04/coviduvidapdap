@@ -9,6 +9,7 @@ use Phalcon\Mvc\Controller;
  */
 class MythBustersController extends Controller
 {
+    
     /**
      * Initialize page.
      * 
