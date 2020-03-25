@@ -85,8 +85,8 @@ $di->set(
             "controller" => 'disclaimer'
         ));
 
-        // wiki - myth-busters.
-        $router->add("/myth-busters", array(
+        // wiki - mythbusters.
+        $router->add("/mythbusters", array(
             "controller" => 'mythbusters'
         ));
 
