@@ -7,7 +7,7 @@ use Phalcon\Mvc\Controller;
  * 
  * @since 1.0.6
  */
-class MythBustersController extends Controller
+class MythbustersController extends Controller
 {
     
     /**
