@@ -12,6 +12,7 @@ function headerMeta() {
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <meta name="msvalidate.01" content="35923DE3BC3807594902A174663F28B9" />
+            <meta name="description" content="Novel coronavirus tracker, cases updates, statistics, charts, wiki and helpful resources">
             <link rel="dns-prefetch" href="//coviduvidapdap.com" />
             <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
             <link rel="dns-prefetch" href="//fonts.googleapis.com" />

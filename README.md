@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/KSym04/coviduvidapdap.svg?branch=master)](https://travis-ci.org/KSym04/coviduvidapdap)
 
-Novel coronavirus tracker, statistics, news, updates & charts
+Novel coronavirus tracker, cases updates, statistics, charts, wiki and helpful resources
 
 ![Covid-19 Confirmed](https://covid19-badges.herokuapp.com/confirmed/latest)
 ![Covid-19 Recovered](https://covid19-badges.herokuapp.com/recovered/latest)
@@ -13,6 +13,8 @@ Novel coronavirus tracker, statistics, news, updates & charts
 Please feel free to contribute pull requests or create issues for bugs and feature requests.
 
 ## License & Credits ##
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
 <a href="http://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</a> - The app is available to the public strictly for educational and academic research purposes. It's not allowed to publish, distribute, or use the app in a commercial way.
 
