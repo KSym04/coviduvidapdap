@@ -16,11 +16,11 @@ Please feel free to contribute pull requests or create issues for bugs and featu
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
-<a href="http://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</a> - The app is available to the public strictly for educational and academic research purposes. It's not allowed to publish, distribute, or use the app in a commercial way.
+* The app is available to the public strictly for educational and academic research purposes. It's not allowed to publish, distribute, or use the app in a commercial way.
 
 ### Sources ###
 
-* JHU CSSE - https://github.com/CSSEGISandData/COVID-19 - Data repository operated by the Johns Hopkins University Center for Systems Science and Engineering.
+* JHU CSSE: https://github.com/CSSEGISandData/COVID-19 - Data repository operated by the Johns Hopkins University Center for Systems Science and Engineering.
 * World Health Organization (WHO): https://www.who.int/
 * DXY.cn. Pneumonia. 2020. http://3g.dxy.cn/newh5/view/pneumonia. 
 * BNO News: https://bnonews.com/index.php/2020/02/the-latest-coronavirus-cases/ 
