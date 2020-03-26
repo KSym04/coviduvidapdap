@@ -57,6 +57,7 @@ function displayMenu( $menulist = array() ) {
                         <a class="navbar-link">Wiki</a>
                 
                         <div class="navbar-dropdown">
+                            <a class="navbar-item" href="' . BASE_URL . '/what-is-covid-19">What is COVID-19?</a>
                             <a class="navbar-item" href="' . BASE_URL . '/myth-busters">Myth Busters</a>
                         </div>
                     </div>

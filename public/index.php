@@ -14,7 +14,7 @@ date_default_timezone_set( 'Asia/Manila' );
 ini_set( "allow_url_fopen", 1 );
 
 $GLOBALS['dateset'] = date( "Y-m-d", time() );
-$GLOBALS['siteversion'] = '1.0.6';
+$GLOBALS['siteversion'] = '1.0.8';
 
 // Detect protocols.
 if( isset( $_SERVER['HTTPS'] ) ){
@@ -88,6 +88,11 @@ $di->set(
         // mythbusters.
         $router->add("/myth-busters", array(
             "controller" => 'mythbusters'
+        ));
+
+        // what is covid 19.
+        $router->add("/what-is-covid-19", array(
+            "controller" => 'whatcovid'
         ));
 
         $router->handle();

@@ -1,0 +1,108 @@
+<?php
+
+use Phalcon\Tag;
+
+// Set Document Type
+$this->tag->setDoctype(Tag::HTML5);
+echo $this->tag->getDoctype(); ?>
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+<head>
+    <?php echo $this->tag->getTitle(); ?>
+    <?php echo headerMeta(); ?>
+    <?php echo showFavicon(); ?>
+    <?php echo $this->tag->stylesheetLink( 'https://fonts.googleapis.com/css?family=Montserrat|Quicksand:400,500,600,700&display=swap' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'css/base.css?v=' . $GLOBALS['siteversion'] ); ?>
+</head>
+<body>
+<div class="site-page__wrapper">
+
+    <!-- BEGIN HEADER -->
+    <div class="site-page__header">
+        <div class="site-page__header-inner">
+            
+            <div class="container is-widescreen">
+                <nav class="navbar is-primary has-shadow is-spaced">
+                    <div class="navbar-brand">
+                        <a class="navbar-item main-logo" href="<?php echo BASE_URL; ?>">
+                            <h3 class="title"><span class="fas fa-plus-square"></span> Coviduvidapdap</h3>
+                        </a>
+                        <div class="navbar-burger burger" data-target="mainNavBar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div id="mainNavBar" class="navbar-menu">
+                        <?php echo displayMenu(); ?>
+                    </div>
+                </nav><!-- .navbar -->
+            </div>
+
+        </div><!-- .site-page__header-inner -->
+    </div><!-- .site-page__header -->
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN -->
+    <main class="site-page__content">
+        <div class="site-page__content-inner">
+
+            <div class="site-page__default container">
+                <div class="columns">
+                    <div class="column is-1"></div>
+                    <div class="column">
+                        <h1>What is COVID-19?</h1>
+
+                        <ul>
+                            <li>Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2).</li>
+                            <li>The disease was first identified in 2019 in Wuhan, the capital of Hubei, China, and has since spread globally, resulting in the 2019–20 coronavirus pandemic.</li>
+                            <li>The virus is typically spread during close contact and via respiratory droplets produced when people cough or sneeze.</li>
+                            <li>There is no vaccine or specific antiviral treatment for COVID-19. Management involves treatment of symptoms, supportive care, isolation, and experimental measures.</li>             
+                        </ul>
+
+                        <span class="captionize-list">Source: <a href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019" rel="nofollow noopener">Wikipedia - Coronavirus disease 2019</a></span>       
+
+                        <h3 class="title is-4">Covid-19 under microscope</h3>
+
+                        <img src="<?php echo BASE_URL ?>/img/Novel_Coronavirus_SARS-CoV-2.jpg" alt="Microscopy image showing SARS-CoV-2" />
+
+                        <br />
+
+                        <span class="captionize">By NIAID - <a rel="nofollow noopener" class="external free" href="https://www.flickr.com/photos/niaid/49534865371/">https://www.flickr.com/photos/niaid/49534865371/</a>, <a href="https://creativecommons.org/licenses/by/2.0" rel="nofollow noopener" title="Creative Commons Attribution 2.0">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=87484997" rel="nofollow noopener">Link</a></span>
+
+                        <p>
+                            This transmission electron microscope image shows SARS-CoV-2—also known as 2019-nCoV, the virus that causes COVID-19—isolated from a patient in the U.S. Virus particles are shown emerging from the surface of cells cultured in the lab. The spikes on the outer edge of the virus particles give coronaviruses their name, crown-like. Credit: NIAID-RML
+                        </p>
+
+                        <h3 class="title is-4">Tips from the World Health Organization</h3>
+
+                        <ul class="notype">
+                            <li><i class="fas fa-check-circle has-text-success"></i> Wash your hands frequently.</li>
+                            <li><i class="fas fa-check-circle has-text-success"></i> Avoid touching your face.</li>
+                            <li><i class="fas fa-check-circle has-text-success"></i> Sneeze and cough into a tissue or your elbow.</li>
+                            <li><i class="fas fa-check-circle has-text-success"></i> Avoid crowds and standing near others.</li>
+                            <li><i class="fas fa-check-circle has-text-success"></i> Stay home if you think you might be sick.</li>
+                            <li><i class="fas fa-check-circle has-text-success"></i> If you have a fever, cough, or difficulty breathing, follow advice given by your government's health authority.</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="column is-1"></div>
+                </div>
+            </div>
+
+        </div><!-- .site-page__content-inner -->
+    </main><!-- .site-page__content -->
+    <!-- END MAIN -->
+
+    <?php echo footerContents(); ?>
+
+</div><!-- .site-page__wrapper -->
+
+<?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js', false ); ?>
+<?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery-throttle-debounce@1.0.0/jquery.ba-throttle-debounce.min.js', false ); ?>
+<?php echo $this->tag->javascriptInclude( 'js/jquery.stickyheader.min.js?v=' . $GLOBALS['siteversion'] ); ?>
+<?php echo $this->tag->javascriptInclude( 'js/base.min.js?v=' . $GLOBALS['siteversion'] ); ?>
+</body>
+</html>

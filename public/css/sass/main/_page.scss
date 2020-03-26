@@ -71,9 +71,31 @@
             }
         }
 
+        ul.notype {
+            padding-left: 0;
+
+            li {
+                list-style: none;
+                margin-left: 5px;
+                margin-bottom: 15px;
+            }
+        }
+
         em {
             font-family: 'Georgia', serif;
             color: $color__darkgrey;
+        }
+
+        .captionize,
+        .captionize-list {
+            display: block;
+            margin-bottom: 0.5em;
+            font-size: 12px;
+        }
+
+        .captionize-list {
+            margin-left: 20px;
+            margin-bottom: 2em;
         }
     }
 
