@@ -149,6 +149,7 @@ body {
   background-color: #666666;
 }
 .site-page__table-cases .axis-header {
+  max-width: 225px !important;
   background-color: #666666 !important;
 }
 @media (max-width: 1220px) {
