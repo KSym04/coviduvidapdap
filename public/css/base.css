@@ -249,7 +249,7 @@ body {
 .header-nav__wiki p .txt {
   font-size: 11px;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .header-nav__wiki .wiki-separator {
     padding: 0;
     border-top: 1px solid #dbdbdb;
@@ -299,6 +299,35 @@ body {
   font-family: 'Georgia', serif;
   color: #666666;
 }
+.site-page__default .content-table {
+  max-width: 500px;
+  overflow: hidden;
+  margin-bottom: 1.8em;
+  border-left: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+.site-page__default .content-table__th {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.site-page__default .content-table__th,
+.site-page__default .content-table__td {
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  padding: 10px 20px;
+  width: 50%;
+  border-right: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+}
+.site-page__default .content-table__tr .content-table__th:first-child,
+.site-page__default .content-table__tr .content-table__td:first-child {
+  padding-left: 10px;
+}
+.site-page__default .content-table__tr:last-child {
+  border-bottom: 1px solid #dbdbdb;
+}
 .site-page__default .captionize,
 .site-page__default .captionize-list {
   display: block;
@@ -308,6 +337,12 @@ body {
 .site-page__default .captionize-list {
   margin-left: 20px;
   margin-bottom: 2em;
+}
+.site-page__default .linkies {
+  margin-bottom: 10px;
+}
+.site-page__default .linkies-text {
+  margin-bottom: 1.5em;
 }
 @media (max-width: 768px) {
   .site-page__default {

@@ -22,7 +22,7 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
         &__wiki {
             .wiki-separator {
                 padding: 0;
@@ -86,6 +86,39 @@
             color: $color__darkgrey;
         }
 
+        .content-table {
+            max-width: 500px;
+            overflow: hidden;
+            margin-bottom: 1.8em;
+            border-left: 1px solid $color__lightgrey;
+            border-bottom: 1px solid $color__lightgrey;
+        }
+        
+        .content-table__th {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .content-table__th,
+        .content-table__td {
+            float: left;
+            box-sizing: border-box;
+            display: block;
+            padding: 10px 20px;
+            width: 50%;
+            border-right: 1px solid $color__lightgrey;
+            border-top: 1px solid $color__lightgrey
+        }
+        
+        .content-table__tr .content-table__th:first-child,
+        .content-table__tr .content-table__td:first-child {
+            padding-left: 10px;
+        }
+        
+        .content-table__tr:last-child {
+            border-bottom: 1px solid $color__lightgrey;
+        }
+
         .captionize,
         .captionize-list {
             display: block;
@@ -96,6 +129,14 @@
         .captionize-list {
             margin-left: 20px;
             margin-bottom: 2em;
+        }
+
+        .linkies {
+            margin-bottom: 10px;
+
+            &-text {
+                margin-bottom: 1.5em;
+            }
         }
     }
 

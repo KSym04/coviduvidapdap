@@ -59,6 +59,7 @@ function displayMenu( $menulist = array() ) {
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="' . BASE_URL . '/what-is-covid-19">What is COVID-19?</a>
                             <a class="navbar-item" href="' . BASE_URL . '/myth-busters">Myth Busters</a>
+                            <a class="navbar-item" href="' . BASE_URL . '/data-sources">Data Sources</a>
                         </div>
                     </div>
                 </nav>
@@ -66,14 +67,14 @@ function displayMenu( $menulist = array() ) {
                 <div class="wiki-separator">|</div>
 
                 <p class="buttons is-pulled-left">
-                    <a href="https://twitter.com/intent/tweet?url=https://coviduvidapdap.com/&text='. urlencode( 'Novel coronavirus tracker, cases updates, alerts, statistics, charts, wiki and helpful resources' ) .'" target="_blank" rel="nofollow noopener" class="button is-small is-info" title="Share on Twitter">
+                    <a href="https://twitter.com/intent/tweet?url=https://tinyurl.com/rmmv2ac&text='. urlencode( 'Novel coronavirus tracker, cases updates, alerts, statistics, charts, wiki and helpful resources' ) .'" target="_blank" rel="nofollow noopener" class="button is-small is-info" title="Share on Twitter">
                         <span class="icon">
                             <i class="fab fa-twitter"></i>
                         </span>
                         <span class="txt">Twitter</span>
                     </a>
 
-                    <a href="https://www.facebook.com/sharer.php?u=https://coviduvidapdap.com/&t='. urlencode( 'Novel coronavirus tracker, cases updates, alerts, statistics, charts, wiki and helpful resources' ) .'" target="_blank" rel="nofollow noopener" class="button is-link is-small" title="Share on Facebook">
+                    <a href="https://www.facebook.com/sharer.php?u=https://tinyurl.com/rmmv2ac&t='. urlencode( 'Novel coronavirus tracker, cases updates, alerts, statistics, charts, wiki and helpful resources' ) .'" target="_blank" rel="nofollow noopener" class="button is-link is-small" title="Share on Facebook">
                         <span class="icon">
                             <i class="fab fa-facebook"></i>
                         </span>
@@ -97,12 +98,13 @@ function footerContents() {
                         <div class="columns">
                             <div class="column is-1"></div>
                             <div class="column">
-                                <p class="credits footer-blurb">' . sprintf( 'made with <span class="fas fa-heart"></span> by <a href="https://github.com/KSym04/coviduvidapdap" target="_blank" rel="nofollow noopener">%s</a> <br /> <sub>Keep Safe Everyone!</sub>', 'Ken' ) . '</p>
+                                <p class="credits footer-blurb">' . sprintf( 'made with <span class="fas fa-heart"></span> by <a href="https://github.com/KSym04/coviduvidapdap" target="_blank" rel="nofollow noopener">%s</a>, best viewed with <a href="https://brave.com/cov261" target="_blank" rel="nofollow noopener">Brave</a> <br /> <sub>Keep Safe Everyone!</sub>', 'Ken' ) . '</p>
                             </div>
                             <div class="column">
                                 <div class="credits footer-nav">
                                     <ul>
                                         <li><a href="' . BASE_URL . '/disclaimer">Disclaimer</a></li>
+                                        <li><a href="' . BASE_URL . '/terms">Terms</a></li>
                                         <li><a href="' . BASE_URL . '/privacy-policy">Privacy</a></li>
                                     </ul>
                                 

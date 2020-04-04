@@ -1,0 +1,130 @@
+<?php
+
+use Phalcon\Tag;
+
+// Set Document Type
+$this->tag->setDoctype(Tag::HTML5);
+echo $this->tag->getDoctype(); ?>
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+<head>
+    <?php echo $this->tag->getTitle(); ?>
+    <?php echo headerMeta(); ?>
+    <?php echo showFavicon(); ?>
+    <?php echo $this->tag->stylesheetLink( 'https://fonts.googleapis.com/css?family=Montserrat|Quicksand:400,500,600,700&display=swap' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css' ); ?>
+    <?php echo $this->tag->stylesheetLink( 'css/base.css?v=' . $GLOBALS['siteversion'] ); ?>
+</head>
+<body>
+<div class="site-page__wrapper">
+
+    <!-- BEGIN HEADER -->
+    <div class="site-page__header">
+        <div class="site-page__header-inner">
+            
+            <div class="container is-widescreen">
+                <nav class="navbar is-primary has-shadow is-spaced">
+                    <div class="navbar-brand">
+                        <a class="navbar-item main-logo" href="<?php echo BASE_URL; ?>">
+                            <h3 class="title"><span class="fas fa-plus-square"></span> Coviduvidapdap</h3>
+                        </a>
+                        <div class="navbar-burger burger" data-target="mainNavBar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div id="mainNavBar" class="navbar-menu">
+                        <?php echo displayMenu(); ?>
+                    </div>
+                </nav><!-- .navbar -->
+            </div>
+
+        </div><!-- .site-page__header-inner -->
+    </div><!-- .site-page__header -->
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN -->
+    <main class="site-page__content">
+        <div class="site-page__content-inner">
+
+            <div class="site-page__default container">
+                <div class="columns">
+                    <div class="column is-1"></div>
+                    <div class="column">
+                        <h1>Data Sources</h1>
+
+                        <h3 class="title is-4 linkies">JHU CSSE</h3>
+                        <p class="linkies-text">
+                            Data repository operated by the Johns Hopkins University Center for Systems Science and Engineering.<br />
+                            https://github.com/CSSEGISandData/COVID-19
+                        </p>
+                        
+                        <h3 class="title is-4 linkies">World Health Organization (WHO):</h3> 
+                        <p class="linkies-text">https://www.who.int/</p>
+
+                        <h3 class="title is-4 linkies">DXY.cn. Pneumonia. 2020.</h3> 
+                        <p class="linkies-text">http://3g.dxy.cn/newh5/view/pneumonia.</p>
+
+                        <h3 class="title is-4 linkies">BNO News:</h3> 
+                        <p class="linkies-text">https://bnonews.com/index.php/2020/02/the-latest-coronavirus-cases/</p>
+
+                        <h3 class="title is-4 linkies">National Health Commission of the People’s Republic of China (NHC):</h3> 
+                        <p class="linkies-text">http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml</p>
+
+                        <h3 class="title is-4 linkies">China CDC (CCDC):</h3> 
+                        <p class="linkies-text">http://weekly.chinacdc.cn/news/TrackingtheEpidemic.htm</p>
+
+                        <h3 class="title is-4 linkies">Hong Kong Department of Health:</h3> 
+                        <p class="linkies-text">https://www.chp.gov.hk/en/features/102465.html</p>
+
+                        <h3 class="title is-4 linkies">Macau Government:</h3> 
+                        <p class="linkies-text">https://www.ssm.gov.mo/portal/</p>
+
+                        <h3 class="title is-4 linkies">Taiwan CDC:</h3> 
+                        <p class="linkies-text">https://sites.google.com/cdc.gov.tw/2019ncov/taiwan?authuser=0</p>
+
+                        <h3 class="title is-4 linkies">US CDC:</h3> 
+                        <p class="linkies-text">https://www.cdc.gov/coronavirus/2019-ncov/index.html</p>
+
+                        <h3 class="title is-4 linkies">Government of Canada:</h3> 
+                        <p class="linkies-text">https://www.canada.ca/en/public-health/services/diseases/coronavirus.html</p>
+
+                        <h3 class="title is-4 linkies">Australia Government Department of Health:</h3> 
+                        <p class="linkies-text">https://www.health.gov.au/news/coronavirus-update-at-a-glance</p>
+
+                        <h3 class="title is-4 linkies">European Centre for Disease Prevention and Control (ECDC):</h3> 
+                        <p class="linkies-text">https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases</p>
+
+                        <h3 class="title is-4 linkies">Ministry of Health Singapore (MOH):</h3> 
+                        <p class="linkies-text">https://www.moh.gov.sg/covid-19</p>
+
+                        <h3 class="title is-4 linkies">Italy Ministry of Health:</h3> 
+                        <p class="linkies-text">http://www.salute.gov.it/nuovocoronavirus</p>
+
+                        <h3 class="title is-4 linkies">1Point3Arces:</h3> 
+                        <p class="linkies-text">https://coronavirus.1point3acres.com/en</p>
+
+                        <h3 class="title is-4 linkies">NovelCOVID API:</h3>
+                        <p class="linkies-text">https://github.com/NovelCOVID/API - Based on top of Worldometers</p>
+
+                    </div>
+                    <div class="column is-1"></div>
+                </div>
+            </div>
+
+        </div><!-- .site-page__content-inner -->
+    </main><!-- .site-page__content -->
+    <!-- END MAIN -->
+
+    <?php echo footerContents(); ?>
+
+</div><!-- .site-page__wrapper -->
+
+<?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js', false ); ?>
+<?php echo $this->tag->javascriptInclude( 'https://cdn.jsdelivr.net/npm/jquery-throttle-debounce@1.0.0/jquery.ba-throttle-debounce.min.js', false ); ?>
+<?php echo $this->tag->javascriptInclude( 'js/jquery.stickyheader.min.js?v=' . $GLOBALS['siteversion'] ); ?>
+<?php echo $this->tag->javascriptInclude( 'js/base.min.js?v=' . $GLOBALS['siteversion'] ); ?>
+</body>
+</html>

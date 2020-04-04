@@ -14,7 +14,7 @@ date_default_timezone_set( 'Asia/Manila' );
 ini_set( "allow_url_fopen", 1 );
 
 $GLOBALS['dateset'] = date( "Y-m-d", time() );
-$GLOBALS['siteversion'] = '1.0.8';
+$GLOBALS['siteversion'] = '1.0.10';
 
 // Detect protocols.
 if( isset( $_SERVER['HTTPS'] ) ){
@@ -93,6 +93,16 @@ $di->set(
         // what is covid 19.
         $router->add("/what-is-covid-19", array(
             "controller" => 'whatcovid'
+        ));
+
+        // terms.
+        $router->add("/terms", array(
+            "controller" => 'terms'
+        ));
+
+        // data sources
+        $router->add("/data-sources", array(
+            "controller" => 'datasources'
         ));
 
         $router->handle();

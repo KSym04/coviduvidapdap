@@ -1,7 +1,11 @@
 <?php
 
 // Latest counts.
-getNewData( 'https://corona.lmao.ninja/all', 'all' );
+echo 'All counts return: <br />';
+print_r( getNewData( 'https://corona.lmao.ninja/all', 'all' ) );
+
+echo '<br /><br />';
 
 // All countries.
-getNewData( 'https://corona.lmao.ninja/countries', 'countries' );
+echo 'All countries data return: <br />';
+print_r( getNewData( 'https://corona.lmao.ninja/countries', 'countries' ) );
