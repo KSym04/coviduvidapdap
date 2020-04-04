@@ -101,11 +101,27 @@ echo $this->tag->getDoctype(); ?>
                             </thead>
                             <tbody>
                                 <?php
-                                     $get_total_cases = $get_total_todayCases = 
-                                     $get_total_deaths = $get_total_todayDeaths = 
-                                     $get_total_recovered = $get_total_active = 
-                                     $get_total_critical = 0;
-                                     foreach( $table_obj as $tobj ) : ?>
+                                    $get_total_cases = $get_total_todayCases = 
+                                    $get_total_deaths = $get_total_todayDeaths = 
+                                    $get_total_recovered = $get_total_active = 
+                                    $get_total_critical = 0;
+
+                                    // world cases.
+                                    $world_total_cases = $world_total_todayCases = 
+                                    $world_total_deaths = $world_total_todayDeaths = 
+                                    $world_total_recovered = $world_total_active = 
+                                    $world_total_critical = 0;
+                                    foreach( $table_obj as $tobj ) : 
+                                        if( 'world' == strtolower( $tobj->country ) ) {
+                                            $world_total_cases = $tobj->cases;
+                                            $world_total_todayCases = $tobj->todayCases;
+                                            $world_total_deaths = $tobj->deaths;
+                                            $world_total_todayDeaths = $tobj->todayDeaths;
+                                            $world_total_recovered = $tobj->recovered;
+                                            $world_total_active = $tobj->active;
+                                            $world_total_critical = $tobj->critical;
+                                        }
+                                ?>
                                     <tr>
                                         <th><?php echo $tobj->country; ?></th>
                                         <td><?php echo number_format( $tobj->cases ); ?></td>
@@ -128,13 +144,27 @@ echo $this->tag->getDoctype(); ?>
                                 <?php endforeach; ?>
                                 <tr>
                                     <th class="has-background-grey-dark"><strong class="has-text-white">TOTAL</strong></th>
-                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_cases ); ?></strong></td>
-                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_todayCases ); ?></strong></td>
-                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_deaths ); ?></strong></td>
-                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_todayDeaths ); ?></strong></td>
-                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_recovered ); ?></strong></td>
-                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_active ); ?></strong></td>
-                                    <td class="has-background-grey-lighter"><strong class="has-text-dark"><?php echo number_format( $get_total_critical ); ?></strong></td>
+                                    <td class="has-background-grey-lighter">
+                                        <strong class="has-text-dark"><?php echo number_format( $get_total_cases - $world_total_cases ); ?></strong>
+                                    </td>
+                                    <td class="has-background-grey-lighter">
+                                        <strong class="has-text-dark"><?php echo number_format( $get_total_todayCases - $world_total_todayCases ); ?></strong>
+                                    </td>
+                                    <td class="has-background-grey-lighter">
+                                        <strong class="has-text-dark"><?php echo number_format( $get_total_deaths - $world_total_deaths ); ?></strong>
+                                    </td>
+                                    <td class="has-background-grey-lighter">
+                                        <strong class="has-text-dark"><?php echo number_format( $get_total_todayDeaths - $world_total_todayDeaths ); ?></strong>
+                                    </td>
+                                    <td class="has-background-grey-lighter">
+                                        <strong class="has-text-dark"><?php echo number_format( $get_total_recovered - $world_total_recovered ); ?></strong>
+                                    </td>
+                                    <td class="has-background-grey-lighter">
+                                        <strong class="has-text-dark"><?php echo number_format( $get_total_active - $world_total_active ); ?></strong>
+                                    </td>
+                                    <td class="has-background-grey-lighter">
+                                        <strong class="has-text-dark"><?php echo number_format( $get_total_critical - $world_total_critical ); ?></strong>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

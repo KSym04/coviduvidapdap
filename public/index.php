@@ -14,7 +14,7 @@ date_default_timezone_set( 'Asia/Manila' );
 ini_set( "allow_url_fopen", 1 );
 
 $GLOBALS['dateset'] = date( "Y-m-d", time() );
-$GLOBALS['siteversion'] = '1.0.10';
+$GLOBALS['siteversion'] = '1.0.11';
 
 // Detect protocols.
 if( isset( $_SERVER['HTTPS'] ) ){
