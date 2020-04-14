@@ -98,7 +98,7 @@ function footerContents() {
                         <div class="columns">
                             <div class="column is-1"></div>
                             <div class="column">
-                                <p class="credits footer-blurb">' . sprintf( 'made with <span class="fas fa-heart"></span> - best viewed with <a href="https://brave.com/cov261" target="_blank" rel="nofollow noopener">Brave</a> <br /> <sub>Keep Safe Everyone!</sub>', 'Ken' ) . '</p>
+                                <p class="credits footer-blurb">' . sprintf( 'made with <span class="fas fa-heart"></span> - best viewed with <a href="https://brave.com/cov261" target="_blank" rel="nofollow noopener">Brave</a> <br /> <sub>Keep Safe Everyone!</sub>' ) . '</p>
                             </div>
                             <div class="column">
                                 <div class="credits footer-nav">
