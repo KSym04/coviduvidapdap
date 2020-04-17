@@ -29,9 +29,13 @@ function getNewData( $url, $file_name ) {
         return;
     }
 
+    // Set user agent.
+    $user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36';
+
     $ch = curl_init();
     $fp = fopen( BASE_PATH . "/public/data/" . $file_name . "-" . $GLOBALS['dateset'] . ".json", "w+" );
     curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
+    curl_setopt( $ch, CURLOPT_USERAGENT, $user_agent );
     curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
     curl_setopt( $ch, CURLOPT_FILE, $fp );
     curl_setopt( $ch, CURLOPT_URL, $url );
